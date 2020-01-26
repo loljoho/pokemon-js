@@ -28,9 +28,11 @@ var playerPokemon = [
 ];
 
 getPokemonList();             // viewing your pokemon
-catchPokemon("Charmander");   // catching a pokemon
-getPokemonList();             // viewing your pokemon again
-catchPokemon("Squirtle");     // catching a pokemon
+catchPokemon({
+  "name": "Charmander",
+  "type": "fire",
+  "level": 5
+});                           // catching a pokemon
 getPokemonList();             // viewing your pokemon again
 
 // function to get list of player's pokemon
@@ -41,8 +43,7 @@ function getPokemonList() {
     console.log("Pokemon #" 
       + (i + 1) 
       + ": " 
-      + playerPokemon[i]
-    );
+      + playerPokemon[i].name);
   }
 }
 
@@ -52,7 +53,7 @@ function catchPokemon(wildPokemon) {
   if (playerPokemon.length < 6) {
     // add wild pokemon to array of player"s pokemon
     playerPokemon.push(wildPokemon);
-    console.log("You caught a " + wildPokemon + "!");
+    console.log("You caught a " + wildPokemon.name + "!");
   } else {
     console.log("You already have 6 Pokemon!");
   }
