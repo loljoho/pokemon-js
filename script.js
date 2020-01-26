@@ -1,10 +1,30 @@
 // array of player's pokemon
 var playerPokemon = [
-  "Magikarp",   // playerPokemon[0]
-  "Abra",       // playerPokemon[1]
-  "Magikarp",   // playerPokemon[2]
-  "Mew",        // playerPokemon[3]
-  "Pikachu"     // playerPokemon[4]
+  {
+    "name": "Magikarp",
+    "type": "water",
+    "level": 5
+  },
+  {
+    "name": "Abra",
+    "type": "psychic",
+    "level": 5
+  },
+  {
+    "name": "Magikarp",
+    "type": "water",
+    "level": 5
+  },
+  {
+    "name": "Mew",
+    "type": "psychic",
+    "level": 5
+  },
+  {
+    "name": "Pikachu",
+    "type": "electric",
+    "level": 5
+  }
 ];
 
 getPokemonList();             // viewing your pokemon
